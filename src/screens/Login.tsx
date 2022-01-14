@@ -6,18 +6,25 @@ import Center from "../components/utils/Center";
 
 interface Props {}
 
-const tabIdToURL: { [id: string]: string } = {
+const tabIdToURL: { [id: number]: string } = {
   0: "login",
   1: "register",
 };
 
-const Login = (props: Props) => {
+const Login = ({}: Props) => {
+  // getting and setting URL params
   const [searchParams, setSearchParams] = useSearchParams();
+
+  // get action from URL
   const action: string = searchParams.get("action") || "login";
+
+  // used to set initial state
   let indexFromUrl = 0;
   if (action === "register") {
     indexFromUrl = 1;
   }
+
+  // handle Tab Panel
   const [value, setValue] = React.useState(indexFromUrl);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -36,22 +43,9 @@ const Login = (props: Props) => {
         margin={3}
       >
         <Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            variant="fullWidth"
-            aria-label="basic tabs example"
-          >
-            <Tab
-              sx={{ px: { lg: 20, xs: 6 } }}
-              label="Login"
-              {...a11yProps(0)}
-            />
-            <Tab
-              sx={{ px: { lg: 16, xs: 6 } }}
-              label="Register"
-              {...a11yProps(1)}
-            />
+          <Tabs value={value} onChange={handleChange} variant="fullWidth">
+            <Tab sx={{ px: { lg: 20, xs: 6 } }} label="Login" />
+            <Tab sx={{ px: { lg: 16, xs: 6 } }} label="Register" />
           </Tabs>
         </Box>
         {/* login */}
@@ -70,29 +64,15 @@ const Login = (props: Props) => {
   );
 };
 
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
 }
-function TabPanel(props: TabPanelProps) {
-  const { children, value, index, ...other } = props;
 
+const TabPanel = ({ children, value, index }: TabPanelProps) => {
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
+    <div role="tabpanel" hidden={value !== index}>
       {value === index && (
         <Box sx={{ p: 3 }}>
           <>{children}</>
@@ -100,6 +80,6 @@ function TabPanel(props: TabPanelProps) {
       )}
     </div>
   );
-}
+};
 
 export default Login;
