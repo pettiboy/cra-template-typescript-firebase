@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs, Typography } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import AuthContainer from "../components/auth/AuthContainer";
@@ -55,9 +55,6 @@ const Login = ({}: Props) => {
         {/* register */}
         <TabPanel value={value} index={1}>
           <AuthContainer />
-          <Typography sx={{ mt: 4, textAlign: "center" }}>
-            {"Login Register same he hai :)"}
-          </Typography>
         </TabPanel>
       </Box>
     </Center>
