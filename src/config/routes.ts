@@ -13,7 +13,7 @@ const routes: RouteType[] = [
     path: "",
     component: Home,
     name: "Home Screen",
-    protected: false,
+    protected: true,
   },
   {
     path: "/login",
