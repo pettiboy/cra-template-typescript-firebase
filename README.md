@@ -3,7 +3,6 @@
 # CRA TypeScript Firebase Template
 
 [![npm](https://img.shields.io/npm/v/cra-template-typescript-firebase.svg)](https://npmjs.com/package/cra-template-typescript-firebase)
-[![npm](https://img.shields.io/npm/dy/cra-template-typescript-firebase.svg)](https://npmjs.com/package/cra-template-typescript-firebase)
 [![License MIT](https://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/pettiboy/cra-template-typescript-firebase/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/pettiboy/cra-template-typescript-firebase/pulls)
 
@@ -47,6 +46,14 @@ yarn create react-app your-project-name --template typescript-firebase
    - You will get details for setting up `Firebase SDK`.
 
 4. Add your config details in your `.env`.
+
+### SetUp SignIn with google
+
+1. In your project console, click on `Authentication` and `Get Started`.
+
+2. In `Sign-in method`, click on `Google`.
+
+3. Toggle `Enable` and click on `Save`.
 
 ### To create a new screen
 
