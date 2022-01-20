@@ -1,7 +1,39 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.1.0",
-  "private": true,
+  "name": "cra-template-typescript-firebase",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "Hussain Pettiwala",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "template.json",
+  "description": "A quick start Create React App template with React Router, TypeScript, Firebase and authentication built in",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "react-router",
+    "react-router-dom",
+    "typescript",
+    "firebase",
+    "authentication",
+    "SignIn with Google",
+    "mui",
+    "material-ui"
+  ],
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pettiboy/cra-template-typescript-firebase",
+    "directory": "/"
+  },
+  "bugs": {
+    "url": "https://github.com/pettiboy/cra-template-typescript-firebase/issues"
+  },
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -27,7 +59,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pull": "git pull && npm i && npm start",
+    "clean-files": "rm -rf ./template/public ./template/src",
+    "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public",
+    "prepublishOnly": "npm run clean-files && npm run copy-files"
   },
   "eslintConfig": {
     "extends": [
