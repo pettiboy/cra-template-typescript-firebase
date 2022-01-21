@@ -26,10 +26,6 @@ OR
 yarn create react-app your-project-name --template typescript-firebase
 ```
 
-`npx` command installs the most recent stable version of CRA from npm.
-
-`--template` parameter points to this template, note that `cra-template-` prefix is omitted.
-
 ## ⚙️ Usage
 
 ### SetUp firebase
