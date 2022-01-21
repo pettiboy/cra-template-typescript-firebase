@@ -16,12 +16,10 @@ const Logout = ({ navigateTo = "/login" }: Props) => {
     signOut(auth)
       .then(() => {
         navigate(navigateTo);
+        setDisabled(false);
       })
       .catch((error) => {
         console.error(error);
-      })
-      .finally(() => {
-        setDisabled(false);
       });
   };
 
