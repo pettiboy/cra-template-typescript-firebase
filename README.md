@@ -1,8 +1,9 @@
 <div align="center">
 
-# CRA TypeScript Firebase Template
+# Create React App TypeScript Firebase Starter Template
 
 [![npm](https://img.shields.io/npm/v/cra-template-typescript-firebase.svg)](https://npmjs.com/package/cra-template-typescript-firebase)
+[![npm](https://img.shields.io/npm/dy/cra-template-typescript-firebase.svg)](https://npmjs.com/package/cra-template-typescript-firebase)
 [![License MIT](https://img.shields.io/badge/license-MIT-orange.svg?style=flat)](https://raw.githubusercontent.com/pettiboy/cra-template-typescript-firebase/main/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/pettiboy/cra-template-typescript-firebase/pulls)
 
