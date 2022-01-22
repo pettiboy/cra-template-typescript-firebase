@@ -1,7 +1,7 @@
 {
   "name": "cra-template-typescript-firebase",
   "homepage": "http://pettiboy.github.com/cra-template-typescript-firebase",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "author": "Hussain Pettiwala",
   "engines": {
@@ -21,6 +21,8 @@
     "authentication",
     "SignIn with Google",
     "mui",
+    "deploy",
+    "gh-pages",
     "material-ui"
   ],
   "files": [
