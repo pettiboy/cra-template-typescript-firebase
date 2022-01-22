@@ -1,5 +1,6 @@
 {
   "name": "cra-template-typescript-firebase",
+  "homepage": "http://pettiboy.github.com/cra-template-typescript-firebase",
   "version": "0.0.5",
   "license": "MIT",
   "author": "Hussain Pettiwala",
@@ -61,6 +62,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "pull": "git pull && npm i && npm start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "serve": "serve -s build",
+    "build-and-serve": "npm run build && npm run serve",
     "clean-files": "rm -rf ./template/public ./template/src",
     "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public",
     "prepublishOnly": "npm run clean-files && npm run copy-files"
@@ -82,5 +87,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
