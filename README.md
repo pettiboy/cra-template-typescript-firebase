@@ -27,11 +27,13 @@ OR
 yarn create react-app your-project-name --template typescript-firebase
 ```
 
+`NOTE:` This `template` is also available in `JavaScript` [here](https://github.com/pettiboy/cra-template-firebase-starter).
+
 ## ⚙️ Usage
 
 ### SetUp firebase
 
-1. Go to https://console.firebase.google.com/
+1. Go to your [`Firebase Console`](https://console.firebase.google.com/)
 
 2. Click on `Add project`.
 
@@ -42,7 +44,7 @@ yarn create react-app your-project-name --template typescript-firebase
    - Register web app.
    - You will get details for setting up `Firebase SDK`.
 
-4. Add your config details in your `.env`.
+4. Add the config details in your `.env` file (available in root of your project).
 
 ### SetUp SignIn with google
 
@@ -65,6 +67,25 @@ yarn create react-app your-project-name --template typescript-firebase
     name: "Screen Name For Reference",
     protected: false, // if user needs to be authenticated to access this screen
 }
+```
+
+### To Deploy on GitHub Pages
+
+1. Add your domain (your-github-username.github.io) to the OAuth redirect domains list in the `Firebase console -> Auth section -> Sign in method tab`.
+
+2. update the `homepage` field in your `package.json` to the domain you are hosting on. (By default it is: `http://your-github-username.github.io/your-repo-name`)
+
+3. (Optional) Test production build locally: Update the `homepage` field to `/` and run:
+
+```bash
+npm i -g serve # install serve globally via npm
+npm run build-and-serve
+```
+
+4. Deploy to GitHub Pages run:
+
+```bash
+npm run deploy
 ```
 
 ## ✨ Featues
@@ -91,6 +112,10 @@ Firebase configured with `GoogleAuthProvider` implemented.
 
 Login Screen UI built using `@mui/material`.
 
+### 5. Deploy on Github Pages
+
+Deploying on GitHub pages powered by `gh-pages` and [`spa-github-pages`](https://github.com/rafgraph/spa-github-pages)
+
 ## 🔧 File Structure
 
 ```
@@ -110,3 +135,9 @@ Login Screen UI built using `@mui/material`.
 │   │   ├── Login.tsx
 │   │   ├── Home.tsx
 ```
+
+## 📝 Authors
+
+- Hussain Pettiwala ([@pettiboy](https://github.com/pettiboy))
+
+Special thanks to this well written [`blog`](https://grischuk.de/how-to-create-custom-create-react-app-cra-templates) and this [`repo`](https://github.com/alexandr-g/cra-template-typescript-redux) by [alexandr-g](https://github.com/alexandr-g).
